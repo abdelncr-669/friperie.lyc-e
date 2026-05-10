@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Friperie du Lycée | Mode Circulaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2d3436; 
+            --accent: #55efc4;  
+            --bg: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--primary); line-height: 1.6; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px); z-index: 1000; padding: 20px 50px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .logo { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 24px; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul li a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent); }
+
+        header {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; background: linear-gradient(135deg, #e3fdf5 0%, #ffe6fa 100%); padding: 0 20px;
+        }
+        header h1 { font-family: 'Unbounded', sans-serif; font-size: clamp(40px, 8vw, 80px); margin-bottom: 20px; }
+        .btn-main { padding: 15px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        section { padding: 100px 10%; min-height: 60vh; }
+        .section-title { font-family: 'Unbounded', sans-serif; font-size: 36px; margin-bottom: 50px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60%; height: 6px; background: var(--accent); }
+        
+        .content-box { background: var(--white); padding: 60px; border-radius: 30px; border: 1px solid #eee; }
+        .placeholder-text { border: 2px dashed #ccc; padding: 40px; border-radius: 15px; color: #999; text-align: center; font-style: italic; }
+
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        .card { background: #f1f2f6; padding: 30px; border-radius: 20px; text-align: center; }
+        .card i { font-size: 40px; color: var(--accent); margin-bottom: 20px; }
+
+        footer { padding: 50px; text-align: center; background: var(--primary); color: white; }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px; }
+            nav ul { display: none; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">FRIPE<span>LYCÉE</span></div>
+        <ul>
+            <li><a href="#qui">Qui sommes-nous</a></li>
+            <li><a href="#pourquoi">Pourquoi</a></li>
+            <li><a href="#fonctionne">Fonctionnement</a></li>
+            <li><a href="#recolte">Récolte</a></li>
+            <li><a href="#horaires">Horaires</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Donne une seconde <br>vie à ton style.</h1>
+        <p style="font-size: 20px; margin-bottom: 30px;">La friperie solidaire et écologique de notre établissement.</p>
+        <a href="#recolte" class="btn-main">Déposer mes vêtements</a>
+    </header>
+
+    <section id="qui">
+        <h2 class="section-title">Qui sommes-nous ?</h2>
+        <div class="content-box">
+            <div class="placeholder-text">
+                [ Votre texte ici : Présentez l'équipe ou le projet ]
+            </div>
+        </div>
+    </section>
+
+    <section id="pourquoi" style="background: #fff;">
+        <h2 class="section-title">Pourquoi faisons-nous cela ?</h2>
+        <div class="content-box" style="background: var(--bg);">
+            <div class="placeholder-text">
+                [ Votre texte ici : Écologie, solidarité, lutte contre la fast-fashion... ]
+            </div>
+        </div>
+    </section>
+
+    <section id="fonctionne">
+        <h2 class="section-title">Comment cela fonctionne ?</h2>
+        <div class="info-grid">
+            <div class="card">
+                <i class="fa-solid fa-shirt"></i>
+                <h3>Étape 1</h3>
+                <div class="placeholder-text">[ Détails ici ]</div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <h3>Étape 2</h3>
+                <div class="placeholder-text">[ Détails ici ]</div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Étape 3</h3>
+                <div class="placeholder-text">[ Détails ici ]</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recolte" style="background: #2d3436; color: white;">
+        <h2 class="section-title" style="color: white;">Points de récolte</h2>
+        <div class="info-grid">
+            <div class="card" style="color: var(--primary);">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Point A</h3>
+                <div class="placeholder-text">[ Lieu exact dans le lycée ]</div>
+            </div>
+            <div class="card" style="color: var(--primary);">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Point B</h3>
+                <div class="placeholder-text">[ Lieu exact dans le lycée ]</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horaires">
+        <h2 class="section-title">Horaires de la boutique</h2>
+        <div class="content-box">
+            <div class="placeholder-text">
+                [ Notez ici les jours et heures d'ouverture ]
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: #fff;">
+        <h2 class="section-title">Contact</h2>
+        <div class="info-grid">
+            <div class="card">
+                <i class="fa-brands fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>@votre_compte</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p>contact@lycee.fr</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 La Friperie du Lycée - Mode Responsable</p>
+    </footer>
+
+</body>
+</html>
